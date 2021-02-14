@@ -51,7 +51,7 @@ public class ArrayCircularQueue {
 
     /**
      * 从队列中取数据，出队列
-     * @return
+     * @return 取出的数据
      */
     public int getQueue() {
         if (isEmpty()) {
@@ -85,7 +85,7 @@ public class ArrayCircularQueue {
 
     /**
      * 显示队列的头数据，不是取数据
-     * @return
+     * @return 队列的头数据
      */
     public int headQueue() {
         if (isEmpty()) {
