@@ -1,7 +1,7 @@
 package com.wangyc.dataStruture.stack;
 
 import com.wangyc.dataStructure.stack.ArrayStack;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;
 

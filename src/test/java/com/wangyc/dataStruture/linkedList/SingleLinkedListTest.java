@@ -2,7 +2,7 @@ package com.wangyc.dataStruture.linkedList;
 
 import com.wangyc.dataStructure.linkedList.HeroNode;
 import com.wangyc.dataStructure.linkedList.SingleLinkedList;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * 链表测试类
