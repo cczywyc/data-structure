@@ -143,4 +143,6 @@ public class LRUBaseLinkedList<T> {
             this.next = next;
         }
     }
+
+    // test
 }
