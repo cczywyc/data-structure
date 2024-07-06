@@ -1,0 +1,9 @@
+# Jetbrains
+.idea
+
+# build
+.gradle
+build
+
+# macos
+.DS_Store
