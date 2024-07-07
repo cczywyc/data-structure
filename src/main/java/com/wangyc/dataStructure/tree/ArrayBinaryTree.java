@@ -82,4 +82,52 @@ public class ArrayBinaryTree {
         return result;
     }
 
+    /**
+     * array binary tree pre-order traversal
+     *
+     * @return result
+     */
+    public List<Integer> preOrder() {
+        List<Integer> result = new ArrayList<>();
+        dfs(0, "pre", result);
+        return result;
+    }
+
+    /**
+     * array binary tree in-order traversal
+     *
+     * @return result
+     */
+    public List<Integer> inOrder() {
+        List<Integer> result = new ArrayList<>();
+        dfs(0, "in", result);
+        return result;
+    }
+
+    /**
+     * array binary tree post-order traversal
+     *
+     * @return result
+     */
+    public List<Integer> postOrder() {
+        List<Integer> result = new ArrayList<>();
+        dfs(0, "post", result);
+        return result;
+    }
+
+    public void dfs(int i, String type, List<Integer> result) {
+        if (getVal(i) == null) return;
+        if ("pre".equals(type)) {
+            result.add(getVal(i));
+        }
+        dfs(getLeftIndex(i), type, result);
+        if ("in".equals(type)) {
+            result.add(getVal(i));
+        }
+        dfs(getRightIndex(i), type, result);
+        if ("post".equals(type)) {
+            result.add(getVal(i));
+        }
+    }
+
 }
