@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class BinaryTreeDFS {
 
-    private final List<Integer> list = new ArrayList<>();
+    private List<Integer> list = new ArrayList<>();
 
     /**
      * pre-order traversal. root -> left -> right
