@@ -57,4 +57,51 @@ public class BinarySearchTree {
             parent.left = newNode;
         }
     }
+
+    void delete(int num) {
+        if (root == null) {
+            return;
+        }
+        // find the deletion node
+        TreeNode cur = root;
+        TreeNode parent = null;
+        while (cur != null) {
+            if (cur.val == num) {
+                break;
+            }
+            parent = cur;
+            if (cur.val < num) {
+                cur = cur.right;
+            } else {
+                cur = cur.left;
+            }
+        }
+
+        // start delete
+        if (cur == null) {
+            return;
+        }
+
+        // delete a leaf node in BST or delete a node with single child in BST
+        if (cur.left == null || cur.right == null) {
+            TreeNode child = cur.left != null ? cur.left : cur.right;
+            if (cur != root) {
+                if (parent.left == cur) {
+                    parent.left = child;
+                } else {
+                    parent.right = child;
+                }
+            } else {
+                root = child;
+            }
+        } else {
+            // delete a node with both children in BST
+            TreeNode temp = cur.right;
+            while (temp.left != null) {
+                temp = temp.left;
+            }
+            delete(temp.val);
+            cur.val = temp.val;
+        }
+    }
 }
