@@ -16,6 +16,7 @@ public class HeapUsingArray {
     public HeapUsingArray(List<Integer> nums) {
         maxHeap = new ArrayList<>(nums);
         for (int i = getParent(maxHeap.size() - 1); i >= 0; i--) {
+            siftDown(i);
         }
     }
 
